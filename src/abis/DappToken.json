@@ -4962,12 +4962,13 @@
         }
       },
       "links": {},
-      "address": "0x55bD69A237D366b07de6F2bbBE9948B61D1ff2Dc",
-      "transactionHash": "0x90c151cec2d8b4d1c70cff378e3a99bcbc81fae129764d963cc1340383640c13"
+      "address": "0x14fF2ecf61D23c53593843236189cA53bBDa1E94",
+      "transactionHash": "0x91a72388a7a7ffad54bdf489f18b0c77784aab89bb2e4dca6e2b2ca2ece1a8f0"
     }
   },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2021-02-16T22:51:51.445Z",
+  "updatedAt": "2021-02-17T13:24:34.556Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
