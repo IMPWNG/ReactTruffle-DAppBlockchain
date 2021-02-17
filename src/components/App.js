@@ -80,8 +80,7 @@ class App extends Component {
       })
     })
   }
-    //Unstake Tokens
-
+    //Unstake Tokens //TypeError: _this.state.tokenFarm.methods.unstakeTokens is not a function
   unstakeTokens = (amount) => {
     this.setState({ loading: true })
       this.state.tokenFarm.methods.unstakeTokens().send({ from: this.state.account }).on('transactionHash', (hash) => {
