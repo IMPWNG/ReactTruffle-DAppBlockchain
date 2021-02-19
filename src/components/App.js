@@ -18,8 +18,7 @@ class App extends Component {
       const accounts = await web3.eth.getAccounts()
       this.setState({ account: accounts[0] })
 
-      const networkId = await web3.eth.net.getId()
-      console.log(networkId)
+      const networkId = await web3.eth.net.getId();
 
       //Load DaiToken
       const daiTokenData = DaiToken.networks[networkId]
@@ -27,7 +26,8 @@ class App extends Component {
         const daiToken = new web3.eth.Contract(DaiToken.abi, daiTokenData.address)
         this.setState({ daiToken })
         let daiTokenBalance = await daiToken.methods.balanceOf(this.state.account).call()
-        this.setState({ daiTokenBalance: daiTokenBalance.toString() })
+        this.setState({ daiTokenBalance: daiTokenBalance.toString() }) //Cannot read property 'toString' of null
+
       } else {
         window.alert('Dai Token contract not deployed to detected network.')
       }
@@ -39,7 +39,6 @@ class App extends Component {
         this.setState({ dappToken })
         let dappTokenBalance = await dappToken.methods.balanceOf(this.state.account).call()
         this.setState({ dappTokenBalance: dappTokenBalance.toString() })
-        console.log({ balance: dappTokenBalance })
       } else {
         window.alert('Dapp Token contract not deployed to detected network.')
       }
